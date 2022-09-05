@@ -68,7 +68,7 @@
 (require 'init-hippie-expand)
 (require 'init-corfu)
 (require 'init-windows)
-(require 'init-sessions)
+;; (require 'init-sessions)
 (require 'init-mmm)
 
 (require 'init-editing-utils)
@@ -169,6 +169,30 @@
 
 ;; Allow users to provide an optional "init-local" containing personal settings
 (require 'init-local nil t)
+
+
+
+;; Personal settings with "init-xxx-w.el" files
+(require-package 'use-package)
+(set-language-environment "UTF-8")
+(require 'init-utils-w)
+(require 'init-themes-w)
+(require 'init-w32-w);
+
+(require 'init-eglot-w)
+(require 'init-minibuffer-w)
+(require 'init-corfu-w)
+;; (require 'init-sessions-w)
+(require 'init-git-w)
+
+(require 'init-csharp-w)
+(require 'init-org-w)
+(require 'init-yasnippet-w)
+
+(require 'init-view-w)
+(require 'init-workgroup-w)
+(require 'init-evil-w)
+(require 'init-play-w)
 
 (provide 'init)
 
