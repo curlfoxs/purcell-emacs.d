@@ -1,0 +1,5 @@
+# -*- mode: js-mode -*-
+# name: DOM--selector
+# key: $
+# --
+document.querySelector($1)
