@@ -5,8 +5,9 @@
 
 ;; Font customize
 
-;; (set-frame-font "Iosevka NF-14" nil t)
-(set-frame-font "DejaVu Sans Mono-10" nil t)
+;; (set-frame-font "Iosevka-14" nil t)
+;; (set-frame-font "DejaVu Sans Mono-10" nil t)
+;; (set-frame-font "Menlo-14" nil t)
 
 
 ;; Random color themes

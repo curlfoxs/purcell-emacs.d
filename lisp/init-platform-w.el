@@ -1,7 +1,8 @@
-;;; init-ms-win-w.el --- Insert description here -*- lexical-binding: t -*-
+;;; init-platform-w.el --- Insert description here -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
+
 ;; Emacs support for MS Windows
 ;; @see https://www.emacswiki.org/emacs/EmacsForWindows
 ;; @see http://www.manpagez.com/info/emacs/emacs_651.php
@@ -13,5 +14,10 @@
   (setq w32-recognize-altgr nil))
 
 
-(provide 'init-w32-w)
-;;; init-ms-win-w.el ends here
+
+;; Emacs support for Macbook
+;; Option as meta key
+(setq mac-option-modifier 'meta)
+(setq mac-command-modifier 'super)
+(provide 'init-platform-w)
+;;; init-platform-w.el ends here

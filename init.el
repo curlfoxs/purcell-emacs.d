@@ -177,7 +177,7 @@
 (set-language-environment "UTF-8")
 (require 'init-utils-w)
 (require 'init-themes-w)
-(require 'init-w32-w);
+(require 'init-platform-w);
 
 (require 'init-eglot-w)
 (require 'init-minibuffer-w)

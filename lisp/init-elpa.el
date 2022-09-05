@@ -15,11 +15,11 @@
 
 ;;; Standard package repositories
 
-;; (add-to-list 'package-archives '( "melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives '( "melpa" . "https://melpa.org/packages/") t)
 ;; Official MELPA Mirror, in case necessary.
 ;;(add-to-list 'package-archives (cons "melpa-mirror" (concat proto "://www.mirrorservice.org/sites/melpa.org/packages/")) t)
 ;; (add-to-list 'package-archives '("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/") t)
-(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+;; (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 
 
 ;; Work-around for https://debbugs.gnu.org/cgi/bugreport.cgi?bug=34341
