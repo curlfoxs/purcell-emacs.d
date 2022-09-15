@@ -69,6 +69,11 @@
   (add-hook 'js-mode-hook 'eglot-ensure)
   (add-hook 'typescript-mode-hook 'eglot-ensure)
 
+  ;; Disable fly disagnostics temparally
+  (add-hook 'eglot-managed-mode-hook (lambda ()
+                                       ;; (flymake-mode nil)
+                                       (remove-hook 'flymake-diagnostic-functions 'eglot-flymake-backend)))
+
   )
 
 ;;---------------------------------------------------------------------
@@ -81,11 +86,32 @@
 
 
 ;;---------------------------------------------------------------------
-;; tabwidth
+;; c/c++/c# code style
 ;;---------------------------------------------------------------------
-;; (setq-default c-basic-offset 4)
-(require-package 'google-c-style)
-(add-hook 'c-mode-common-hook 'google-set-c-style)
+;; (require-package 'google-c-style)
+;; (add-hook 'c-mode-common-hook 'google-set-c-style)
+
+;; Matches the default setup for visual studio.
+(defun my-c-mode-common-hook ()
+  ;; my customizations for all of c-mode, c++-mode, objc-mode, java-mode
+  (c-set-offset 'substatement-open 0)
+  ;; (c-set-offset 'substatement-open '+)
+  ;; (c-set-offset 'defun-open '+)
+
+  ;; other customizations can go here
+
+  (setq c-default-style "linux")
+  ;; (setq c-default-style "bsd")
+  (setq c++-tab-always-indent t)
+  (setq c-basic-offset 4) ;; Default is 2
+  (setq c-indent-level 4) ;; Default is 2
+
+  (setq tab-stop-list '(4 8 12 16 20 24 28 32 36 40 44 48 52 56 60))
+  (setq tab-width 4)
+  (setq indent-tabs-mode t)             ; use spaces only if nil
+  )
+
+(add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
 
 ;;---------------------------------------------------------------------
 ;; Quickrun
