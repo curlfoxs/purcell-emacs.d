@@ -55,40 +55,43 @@
     (message "Color theme [%s] loaded." theme)))
 
 (defvar wullic-favorite-dark-themes
-  '(modus-operandi
-    srcery
-    doom-dracula
-    doom-gruvbox
-    doom-molokai
-    doom-monokai-classic
-    doom-monokai-machine
-    doom-monokai-octagon
-    doom-monokai-pro
-    doom-monokai-spectrum
-    doom-material-dark
-    doom-moonlight
-    doom-xcode
-    ;; doom-nova
-    doom-nord
-    doom-zenburn
-    deeper-blue
-    tango-dark
-    leuven-dark
-    solarized-dark-high-contrast
-    solarized-gruvbox-dark
-    sanityinc-solarized-dark
-    sanityinc-tomorrow-blue
-    sanityinc-tomorrow-eighties
-    sanityinc-tomorrow-night
+  '(
+    ;; modus-operandi
+    ;; srcery
+    ;; doom-dracula
+    ;; doom-gruvbox
+    ;; doom-molokai
+    ;; doom-monokai-classic
+    ;; doom-monokai-machine
+    ;; doom-monokai-octagon
+    ;; doom-monokai-pro
+    ;; doom-monokai-spectrum
+    ;; doom-material-dark
+    ;; doom-moonlight
+    ;; doom-xcode
+    ;; ;; doom-nova
+    ;; doom-nord
+    ;; doom-zenburn
+    ;; deeper-blue
+    ;; tango-dark
+    ;; leuven-dark
+    ;; solarized-dark-high-contrast
+    ;; solarized-gruvbox-dark
+    ;; sanityinc-solarized-dark
+    ;; sanityinc-tomorrow-blue
+    ;; sanityinc-tomorrow-eighties
+    ;; sanityinc-tomorrow-night
     spacemacs-dark)
   "My favorite dark themes.")
 
 (defvar wullic-favorite-light-themes
-  '(solarized-gruvbox-light
+  '(
+    ;; solarized-gruvbox-light
     ;; modus-vivendi
-    sanityinc-solarized-light
-    sanityinc-tomorrow-day
-    spacemacs-dark)
+    ;; sanityinc-solarized-light
+    ;; sanityinc-tomorrow-day
+    spacemacs-dark
+    )
   "My favorite light themes.")
 
 (defvar wullic-favorite-color-themes

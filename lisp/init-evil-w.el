@@ -14,8 +14,8 @@
 ;;---------------------------------------------------------------------
 ;; Use emacs basic bindings
 (setq evil-disable-insert-state-bindings t)
-(setq evil-move-beyond-eol t)
-(setq evil-move-cursor-back nil)
+;; (setq evil-move-beyond-eol t)
+;; (setq evil-move-cursor-back nil)
 (setq evil-want-minibuffer t)
 
 (add-hook 'after-init-hook 'evil-mode)
