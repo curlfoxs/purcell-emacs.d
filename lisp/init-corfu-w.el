@@ -7,8 +7,8 @@
 
 
 (when (maybe-require-package 'corfu)
-  (setq-default corfu-auto-delay 0.1)
-  (setq corfu-auto-prefix 2)
+  (setq-default corfu-auto-delay 0.2)
+  (setq corfu-auto-prefix 3)
   ;; TODO: https://github.com/jdtsmith/kind-icon
   )
 

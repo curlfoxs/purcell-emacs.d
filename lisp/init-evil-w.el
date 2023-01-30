@@ -3,12 +3,50 @@
 ;;; Code:
 
 ;;---------------------------------------------------------------------
+;; Cpp Headerise
+;;---------------------------------------------------------------------
+(defun curlfoxs/headerise-cpp ()
+  "Add minimal header and footer to an elisp buffer in order to placate flycheck."
+  (interactive)
+  (save-excursion
+    (goto-char (point-min))
+    (insert  "#include<bits/stdc++.h>\n\n"
+             "using namespace std;\n\n"
+             "#define ll long long\n#define ar array\n\nconst int mxN=2e5;\nint n;\n"
+             "int main() {\n\n}"))
+  )
+
+;;---------------------------------------------------------------------
 ;; Commands needed in these packages
 ;;---------------------------------------------------------------------
 (require-package 'general)
 (require-package 'expand-region)
 (require-package 'evil)
 
+
+(global-set-key (kbd "C-;") nil)
+(global-set-key (kbd "C-M-;") 'avy-goto-char-timer)
+(global-set-key (kbd "C-v") nil)
+(global-set-key (kbd "C-v") 'yank);
+;;---------------------------------------------------------------------
+;; Other config
+;;---------------------------------------------------------------------
+;; (global-linum-mode t)
+(tab-bar-mode 1)
+(setq display-line-numbers-type 'relative)
+
+(defun compileandrun()
+  (interactive)
+  (let* ((src (file-name-nondirectory (buffer-file-name)))
+         (exe (file-name-sans-extension src)))
+    (if *is-a-ms-win*
+        (compile (concat "g++ " src " -o " exe " &&  " exe ) t)
+      (compile (concat "g++ " src " -o " exe " &&timeout 1s ./" exe ) t)
+      )))
+(global-unset-key (kbd "C-v"))
+(global-set-key (kbd "C-v") 'clipboard-yank)
+(global-unset-key (kbd "C-v"))
+(global-set-key (kbd "C-a") 'evil-first-non-blank)
 ;;---------------------------------------------------------------------
 ;; Evil package config
 ;;---------------------------------------------------------------------
@@ -101,7 +139,7 @@
   "4" (general-simulate-key "C-x 4")
   "5" (general-simulate-key "C-x 5")
   ;; "c" 'my-query-replace-prefix
-  ;; "a" 'org-agenda
+  "a" 'comment-line
   "d" 'dired-jump
   "ee" 'sanityinc/eval-last-sexp-or-region
   "el" 'sanityinc/load-this-file
@@ -118,14 +156,17 @@
   "ga" 'consult-ag
   "gg" 'consult-git-grep
   "h" 'help-command
+  "i" 'curlfoxs/headerise-cpp
   ;; "jx" 'exchange-point-and-mark
-  "j;" 'avy-goto-char-timer ;; 「j」 Means jump
-  "jc" 'avy-copy-line
+  ";" 'avy-goto-char-timer 
+  ;; ";l" 'avy-goto-line ;;
+  "jc" 'avy-copy-line;; 「j」 Means jump
   "jl" 'consult-goto-line
   "jd" 'xref-find-definitions
   "jo" 'consult-outline
   "js" 'xref-find-apropos
   "jr" 'xref-find-references
+  "k"  'consult-buffer
   ;; "lgg" 'conslut-git-grep ;; 「l」 Meas list， 它和consult的意思有异曲同工之妙。
   ;; "lgr" 'consult-ripgrep
   "ll" 'consult-line
@@ -149,15 +190,17 @@
   "p" (general-simulate-key "C-c p")
   "q" 'save-buffers-kill-emacs
   "r" 'consult-recent-file
-  "s" 'consult-buffer
+  "s" 'save-buffer
+  "t" 'consult-buffer
   "wo" 'wg-open-workgroup
   "wk" 'wg-kill-workgroup
   "wc" 'wg-create-workgroup
   "wp" 'winner-undo
   "wn" 'winner-redo
+  "x" #'compileandrun
   "y" 'browse-kill-ring
   "SPC" 'cycle-spacing)
-(general-auto-unbind-keys t)
+;; (general-auto-unbind-keys t)
 
 (global-set-key (kbd "C-'") 'undo-redo)
 (global-set-key (kbd "M-<left>") 'previous-buffer)

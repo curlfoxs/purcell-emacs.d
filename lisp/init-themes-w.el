@@ -8,7 +8,9 @@
 ;; (set-frame-font "Iosevka-14" nil t)
 ;; (set-frame-font "DejaVu Sans Mono-10" nil t)
 ;; (set-frame-font "Menlo-14" nil t)
-
+;; (set-frame-font "InputMono MediumIta-11" nil t)
+(set-frame-font "Fixedsys Excelsior-14" nil t)
+;; (set-frame-font "Fixedsys" nil t)
 
 ;; Random color themes
 
@@ -80,17 +82,19 @@
     ;; sanityinc-solarized-dark
     ;; sanityinc-tomorrow-blue
     ;; sanityinc-tomorrow-eighties
-    ;; sanityinc-tomorrow-night
-    spacemacs-dark)
+    sanityinc-tomorrow-night
+    spacemacs-dark
+    )
   "My favorite dark themes.")
 
 (defvar wullic-favorite-light-themes
   '(
-    ;; solarized-gruvbox-light
-    ;; modus-vivendi
-    ;; sanityinc-solarized-light
-    ;; sanityinc-tomorrow-day
-    spacemacs-dark
+    solarized-gruvbox-light
+    modus-vivendi
+    sanityinc-solarized-light
+    sanityinc-tomorrow-day
+    spacemacs-light
+    tango
     )
   "My favorite light themes.")
 
