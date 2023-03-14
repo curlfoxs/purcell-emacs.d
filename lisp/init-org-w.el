@@ -4,7 +4,13 @@
 
 
 ;; org-mode settings
-(setq wullic-org-directory "~/Google-drive/org/")
+(setq win-org-dir "~/Google-drive/org/")
+(setq mac-org-dir "~/Google Drive/我的云端硬盘/org")
+
+(if *is-a-mac*
+    (setq wullic-org-directory mac-org-dir)
+  (setq wullic-org-directory win-org-dir)
+  )
 (setq org-default-notes-file  (expand-file-name "inbox.org" wullic-org-directory))
 (setq org-agenda-files (list wullic-org-directory))
 

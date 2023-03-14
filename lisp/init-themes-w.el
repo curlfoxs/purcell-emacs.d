@@ -4,16 +4,17 @@
 
 
 ;; Font customize
-
-;; (set-frame-font "Iosevka-14" nil t)
-;; (set-frame-font "DejaVu Sans Mono-10" nil t)
-;; (set-frame-font "Menlo-14" nil t)
-;; (set-frame-font "InputMono MediumIta-11" nil t)
-(set-frame-font "Fixedsys Excelsior-14" nil t)
-;; (set-frame-font "Fixedsys" nil t)
+(let ((iosevka1 "Iosevka-14")
+      (iosevka2 "Ioseva Fixed-15")
+      (fixday_mac "Fixedsys Excelsior 3.01-15")
+      (fixday_win "Fixdays"))
+  (if *is-a-mac*
+      (set-frame-font fixday_mac nil t)
+    (set-frame-font fixday_win nil t))
+  )
 
-;; Random color themes
 
+;; Random color themes
 ;; (require-package 'modus-themes)
 (require-package 'doom-themes)
 (require-package 'tangotango-theme)
