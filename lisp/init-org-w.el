@@ -58,7 +58,7 @@
         '(("d" "default" plain
            "%?"
            :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org"
-                              "#+title: ${title}\n#AUTHOR: curlfoxs\n#+OPTIONS:  H:2 num:t toc:nil \n:nil @:t ::t |:t ^:t f:t TeX:t\n#+LATEX_HEADER: \usepackage{ctex}\n\n- tags ::      :noexport:\n\n* What's ${title}\n\n")
+                              "#+title: ${title}\n#+AUTHOR: curlfoxs\n#+OPTIONS:  H:2 num:t toc:nil @:t ::t |:t ^:t f:t TeX:t\n#+LATEX_HEADER: \\usepackage{ctex}\n\n- tags ::      :noexport:\n\n* What's ${title}\n\n")
            :unnarrowed t)
 
           ("l" "programming language" plain

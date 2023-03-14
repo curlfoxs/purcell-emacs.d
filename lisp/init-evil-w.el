@@ -1,4 +1,5 @@
 ;;; init-evil.el --- Insert description here -*- lexical-binding: t -*-
+
 ;;; Commentary:
 ;;; Code:
 
@@ -197,9 +198,13 @@
   "wc" 'wg-create-workgroup
   "wp" 'winner-undo
   "wn" 'winner-redo
-  "x" #'compileandrun
+  ;; "x" #'compileandrun
+  "x" 'quickrun-shell
   "y" 'browse-kill-ring
-  "SPC" 'cycle-spacing)
+  "SPC" 'cycle-spacing
+  "," 'winner-undo
+  "." 'winner-redo
+  "u" 'undo-redo)
 ;; (general-auto-unbind-keys t)
 
 (global-set-key (kbd "C-'") 'undo-redo)
