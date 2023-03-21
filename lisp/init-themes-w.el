@@ -7,7 +7,7 @@
 (let ((iosevka1 "Iosevka-14")
       (iosevka2 "Ioseva Fixed-15")
       (fixday_mac "Fixedsys Excelsior 3.01-15")
-      (fixday_win "Fixdays"))
+      (fixday_win "Fixedsys Excelsior-16"))
   (if *is-a-mac*
       (set-frame-font fixday_mac nil t)
     (set-frame-font fixday_win nil t))
@@ -90,12 +90,12 @@
 
 (defvar wullic-favorite-light-themes
   '(
-    solarized-gruvbox-light
-    modus-vivendi
-    sanityinc-solarized-light
-    sanityinc-tomorrow-day
-    spacemacs-light
-    tango
+    ;; solarized-gruvbox-light
+    ;; modus-vivendi
+    ;; sanityinc-solarized-light
+    ;; sanityinc-tomorrow-day
+    ;; spacemacs-light
+    ;; tango
     )
   "My favorite light themes.")
 

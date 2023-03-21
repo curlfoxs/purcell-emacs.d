@@ -4,7 +4,7 @@
 
 
 ;; org-mode settings
-(setq win-org-dir "~/Google-drive/org/")
+(setq win-org-dir "w:/oywl/org")
 (setq mac-org-dir "~/Google Drive/我的云端硬盘/org")
 
 (if *is-a-mac*
